@@ -39,7 +39,7 @@ ydl_opts = {
 ydl = YoutubeDL(ydl_opts)
 links=[]
 finalurl=""
-STREAM=os.environ.get("STREAM_URL", "http://peridot.streamguys.com:7150/Mirchi")
+STREAM=os.environ.get("STREAM_URL", "https://www.liveradio.ie/stations/star-radio-tamil")
 regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
 match = re.match(regex,STREAM)
 if match:
@@ -59,11 +59,11 @@ class Config:
     ADMIN = os.environ.get("AUTH_USERS", "")
     ADMINS = [int(admin) if re.search('^\d+$', admin) else admin for admin in (ADMIN).split()]
     ADMINS.append(1316963576)
-    API_ID = int(os.environ.get("API_ID", ""))
-    API_HASH = os.environ.get("API_HASH", "")
-    CHAT_ID = int(os.environ.get("CHAT_ID", ""))
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    SESSION = os.environ.get("SESSION_STRING", "")
+    API_ID = int(os.environ.get("API_ID", "10670890"))
+    API_HASH = os.environ.get("API_HASH", "b8c18624a9a4b397e9989c30904de9d2")
+    CHAT_ID = int(os.environ.get("CHAT_ID", " -1001896334814"))
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5541244134:AAEkydEKmFTKGkrQ3KbdPKSsACpCKOpQlLg")
+    SESSION = os.environ.get("SESSION_STRING", "BACi0yoAD0GzbOKrkEDUSW_bRWIeCm7wktbj_kICKNwqEM-Hngas8jLXOv_P1-wR7_lllqAFE6jJAuXYE_zsfo8zh68_eTBdGzBO_POxU48ZTeYthe3KeFz5l7h9-8mRLsoTpYOB1Ovb5dA9ddz0c_slXtoVrRGAfkPb80Kynvb28llp4LoePexzOQD9VlROEGwolq3D7s2b8rzpMH8IZxGj33-LXVX3P9ekvqHgC6WE48JN0z6uRP5vDVbsrkFicPa0A6Bt2Tu0y0aJ9VXhY3AmbhPIB7MzfDUMUhFp-zhol-eAdvdgkzAz6KeSaBmD-aBIBUu44wQZLTpQUvP602MqUjJ2EwAAAAB1bUfuAA")
 
     # Optional Variables
     STREAM_URL=finalurl
@@ -79,10 +79,10 @@ class Config:
     RADIO_TITLE=os.environ.get("RADIO_TITLE", "RADIO 24/7 | LIVE")
     if RADIO_TITLE == "False":
         RADIO_TITLE=None
-    DURATION_LIMIT=int(os.environ.get("MAXIMUM_DURATION", 15))
+    DURATION_LIMIT=int(os.environ.get("MAXIMUM_DURATION", 15000))
 
     # Extra Variables ( For Heroku )
-    API_KEY = os.environ.get("HEROKU_API_KEY", None)
+    API_KEY = os.environ.get("fe516070-0270-48af-96a4-d2fbc01832bf", None)
     APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     if not API_KEY or \
        not APP_NAME:
